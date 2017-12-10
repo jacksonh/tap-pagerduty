@@ -1,7 +1,4 @@
 
-import sys
-import json
-
 import pypd
 import singer
 from singer import utils
