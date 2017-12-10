@@ -14,13 +14,13 @@ def get_pagerduty_incidents(config):
     incidents = pypd.Incident.find(since=config.get('start_date'))
     for incident in incidents:
         res.append({
-                'id': str(incident.json['id']),
-                'status': str(incident.json['status']),
-                'summary': str(incident.json['summary']),
-                'url': str(incident.json['html_url']),
-                'last_status_change_by': str(incident.json['last_status_change_by']['summary']),
-                'created_at': str(incident.json['created_at']),
-                'last_updated_at': str(incident.json['last_status_change_at'])
+            'id': str(incident.json['id']),
+            'status': str(incident.json['status']),
+            'summary': str(incident.json['summary']),
+            'url': str(incident.json['html_url']),
+            'last_status_change_by': str(incident.json['last_status_change_by']['summary']),
+            'created_at': str(incident.json['created_at']),
+            'last_updated_at': str(incident.json['last_status_change_at'])
         })
     return res
 
