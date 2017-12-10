@@ -38,7 +38,6 @@ def schema():
         }
 
 def discover(config):
-    incidents = get_pagerduty_incidents(config)
     singer.write_schema('pagerduty', schema(), 'id')
 
 
