@@ -44,4 +44,4 @@ following fields:
 
 3. Run the Tap in Sync Mode
 
-    tap-jira -c config.json
+    tap-pagerduty -c config.json
